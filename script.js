@@ -8,6 +8,7 @@
 // @description Gets rid of annoying stuff on uottawa brightspace homescreen.
 // ==/UserScript==
 
+
 (function cleanUpBrightspace() {
   'use strict';
 
@@ -28,11 +29,19 @@
   const elementsToHide = [
     '.homepage-col-4',
     ' .d2l-widget-padding-full.d2l-tile.d2l-widget',
-    '.homepage-col-12'
+    '.homepage-col-12',
+    '.dvOuter'
   ];
+
 
   //actually hides the elements
   for (const selector of elementsToHide) {
     hideElement(selector);
   }
+
+  //hides course evaluation popup
+  setTimeout(() => {document.getElementById('dvOuter').style.display = 'none';}, 750);
+  setTimeout(() => {document.getElementById('dvOuter').style.display = 'none';}, 1500); //failsafe in case takes long to load
+  setTimeout(() => {document.getElementById('dvOuter').style.display = 'none';}, 2250); //second failsave in case takes really long
+
 })();
