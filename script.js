@@ -30,7 +30,8 @@
     '.homepage-col-4',
     ' .d2l-widget-padding-full.d2l-tile.d2l-widget',
     '.homepage-col-12',
-    '.dvOuter'
+    '.dvOuter',
+    '.d2l-custom-widget.d2l-widget'
   ];
 
 
